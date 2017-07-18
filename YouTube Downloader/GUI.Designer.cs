@@ -35,6 +35,8 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.progText = new System.Windows.Forms.Label();
             this.startBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.songName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // vidUrl
@@ -66,6 +68,7 @@
             // 
             this.resolution.FormattingEnabled = true;
             this.resolution.Items.AddRange(new object[] {
+            "480",
             "720",
             "1080"});
             this.resolution.Location = new System.Drawing.Point(75, 38);
@@ -99,11 +102,29 @@
             this.startBtn.UseVisualStyleBackColor = true;
             this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Name:";
+            // 
+            // songName
+            // 
+            this.songName.Location = new System.Drawing.Point(75, 95);
+            this.songName.Name = "songName";
+            this.songName.Size = new System.Drawing.Size(222, 20);
+            this.songName.TabIndex = 7;
+            // 
             // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 151);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.songName);
             this.Controls.Add(this.startBtn);
             this.Controls.Add(this.progText);
             this.Controls.Add(this.progressBar);
@@ -116,6 +137,7 @@
             this.Name = "GUI";
             this.Text = "YouTube Downloader - Created by Nicolas Luckie";
             this.Load += new System.EventHandler(this.GUI_Load);
+            this.Enter += new System.EventHandler(this.startBtn_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +152,8 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label progText;
         private System.Windows.Forms.Button startBtn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox songName;
     }
 }
 
